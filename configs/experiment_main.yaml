@@ -1,0 +1,27 @@
+seed: 42
+data:
+  assets: [SPY, TLT, GLD]
+  exogenous: [^VIX, IEF, UUP]
+  start: 2012-01-01
+  end: 2025-12-31
+  oep_start: 2023-12-26
+  oep_end: 2025-12-26
+labeling:
+  volatility_window: 20
+  k: 0.65
+xai:
+  methods: [permutation_importance, shap]
+  rolling_window: 60
+  step: 2
+filter:
+  quantiles: [0.2, 0.3, 0.4, 0.5]
+  minimum_trades_for_sharpe: 15
+evaluation:
+  costs_bps: [0, 5, 10]
+  primary_metric: per_trade_sharpe
+  report_trade_count: true
+statistics:
+  block_length: 20
+  bootstrap_iterations: 2000
+  permutation_iterations: 2000
+  correction: max_stat
