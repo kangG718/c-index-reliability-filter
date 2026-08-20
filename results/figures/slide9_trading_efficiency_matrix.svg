@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+  <rect width="1600" height="900" fill="#ffffff"/>
+  <style>
+    .title { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 48px; font-weight: 700; fill: #0f172a; }
+    .subtitle { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 25px; fill: #475569; }
+    .header { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 24px; font-weight: 700; fill: #0f172a; }
+    .rowlabel { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 23px; font-weight: 700; fill: #111827; }
+    .cellvalue { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 25px; font-weight: 700; fill: #0f172a; }
+    .celldetail { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 18px; fill: #475569; }
+    .note { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 23px; font-weight: 600; fill: #334155; }
+    .small { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 18px; fill: #64748b; }
+    .grid { fill: #ffffff; stroke: #cbd5e1; stroke-width: 1.5; rx: 12; }
+    .headbox { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; rx: 12; }
+    .improve { fill: #ecfdf5; stroke: #99f6e4; stroke-width: 1.5; rx: 12; }
+    .reduce { fill: #f0fdfa; stroke: #99f6e4; stroke-width: 1.5; rx: 12; }
+    .same { fill: #f8fafc; stroke: #cbd5e1; stroke-width: 1.5; rx: 12; }
+    .model-gbm { fill: #0f766e; }
+    .model-mlp { fill: #1e3a8a; }
+    .model-rf { fill: #475569; }
+    .modeltext { font-family: Arial, "Apple SD Gothic Neo", "Noto Sans KR", sans-serif; font-size: 20px; font-weight: 700; fill: #ffffff; }
+  </style>
+
+  <text x="800" y="78" text-anchor="middle" class="title">Result 1: Trading Efficiency</text>
+  <text x="800" y="120" text-anchor="middle" class="subtitle">C-index 필터링 이후 거래 빈도는 줄고, 거래 단위 성과는 개선되는 경향을 보임</text>
+
+  <text x="253" y="181" text-anchor="middle" class="header">Model / Asset</text>
+  <rect x="390" y="150" width="300" height="62" class="headbox"/>
+  <text x="540" y="176" text-anchor="middle" class="header">Trade Count</text>
+  <text x="540" y="200" text-anchor="middle" class="small">lower is better</text>
+
+  <rect x="720" y="150" width="300" height="62" class="headbox"/>
+  <text x="870" y="176" text-anchor="middle" class="header">Avg Return</text>
+  <text x="870" y="200" text-anchor="middle" class="small">higher is better</text>
+
+  <rect x="1050" y="150" width="300" height="62" class="headbox"/>
+  <text x="1200" y="176" text-anchor="middle" class="header">Win Rate</text>
+  <text x="1200" y="200" text-anchor="middle" class="small">higher is better</text>
+
+  <!-- Row helper: y positions 235, 300, 365, 430, 495, 560, 625, 690, 755 -->
+  <!-- GBM GLD -->
+  <rect x="155" y="230" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="255" r="18" class="model-gbm"/><text x="190" y="262" text-anchor="middle" class="modeltext">G</text>
+  <text x="225" y="263" class="rowlabel">GBM · GLD</text>
+  <rect x="390" y="230" width="300" height="50" class="reduce"/><text x="540" y="262" text-anchor="middle" class="cellvalue">↓ 4 trades</text>
+  <rect x="720" y="230" width="300" height="50" class="improve"/><text x="870" y="262" text-anchor="middle" class="cellvalue">↑ +0.602</text>
+  <rect x="1050" y="230" width="300" height="50" class="improve"/><text x="1200" y="262" text-anchor="middle" class="cellvalue">↑ +23.3%p</text>
+
+  <!-- GBM SPY -->
+  <rect x="155" y="295" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="320" r="18" class="model-gbm"/><text x="190" y="327" text-anchor="middle" class="modeltext">G</text>
+  <text x="225" y="328" class="rowlabel">GBM · SPY</text>
+  <rect x="390" y="295" width="300" height="50" class="reduce"/><text x="540" y="327" text-anchor="middle" class="cellvalue">↓ 21 trades</text>
+  <rect x="720" y="295" width="300" height="50" class="improve"/><text x="870" y="327" text-anchor="middle" class="cellvalue">↑ +0.023</text>
+  <rect x="1050" y="295" width="300" height="50" class="improve"/><text x="1200" y="327" text-anchor="middle" class="cellvalue">↑ +7.7%p</text>
+
+  <!-- GBM TLT -->
+  <rect x="155" y="360" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="385" r="18" class="model-gbm"/><text x="190" y="392" text-anchor="middle" class="modeltext">G</text>
+  <text x="225" y="393" class="rowlabel">GBM · TLT</text>
+  <rect x="390" y="360" width="300" height="50" class="reduce"/><text x="540" y="392" text-anchor="middle" class="cellvalue">↓ 3 trades</text>
+  <rect x="720" y="360" width="300" height="50" class="improve"/><text x="870" y="392" text-anchor="middle" class="cellvalue">↑ +0.169</text>
+  <rect x="1050" y="360" width="300" height="50" class="improve"/><text x="1200" y="392" text-anchor="middle" class="cellvalue">↑ +6.7%p</text>
+
+  <!-- MLP GLD -->
+  <rect x="155" y="425" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="450" r="18" class="model-mlp"/><text x="190" y="457" text-anchor="middle" class="modeltext">M</text>
+  <text x="225" y="458" class="rowlabel">MLP · GLD</text>
+  <rect x="390" y="425" width="300" height="50" class="reduce"/><text x="540" y="457" text-anchor="middle" class="cellvalue">↓ 7 trades</text>
+  <rect x="720" y="425" width="300" height="50" class="improve"/><text x="870" y="457" text-anchor="middle" class="cellvalue">↑ +0.277</text>
+  <rect x="1050" y="425" width="300" height="50" class="improve"/><text x="1200" y="457" text-anchor="middle" class="cellvalue">↑ +4.8%p</text>
+
+  <!-- MLP SPY -->
+  <rect x="155" y="490" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="515" r="18" class="model-mlp"/><text x="190" y="522" text-anchor="middle" class="modeltext">M</text>
+  <text x="225" y="523" class="rowlabel">MLP · SPY</text>
+  <rect x="390" y="490" width="300" height="50" class="reduce"/><text x="540" y="522" text-anchor="middle" class="cellvalue">↓ 30 trades</text>
+  <rect x="720" y="490" width="300" height="50" class="improve"/><text x="870" y="522" text-anchor="middle" class="cellvalue">↑ +0.225</text>
+  <rect x="1050" y="490" width="300" height="50" class="improve"/><text x="1200" y="522" text-anchor="middle" class="cellvalue">↑ +6.8%p</text>
+
+  <!-- MLP TLT -->
+  <rect x="155" y="555" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="580" r="18" class="model-mlp"/><text x="190" y="587" text-anchor="middle" class="modeltext">M</text>
+  <text x="225" y="588" class="rowlabel">MLP · TLT</text>
+  <rect x="390" y="555" width="300" height="50" class="reduce"/><text x="540" y="587" text-anchor="middle" class="cellvalue">↓ 16 trades</text>
+  <rect x="720" y="555" width="300" height="50" class="improve"/><text x="870" y="587" text-anchor="middle" class="cellvalue">↑ +0.428</text>
+  <rect x="1050" y="555" width="300" height="50" class="improve"/><text x="1200" y="587" text-anchor="middle" class="cellvalue">↑ +18.5%p</text>
+
+  <!-- RF GLD -->
+  <rect x="155" y="620" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="645" r="18" class="model-rf"/><text x="190" y="652" text-anchor="middle" class="modeltext">R</text>
+  <text x="225" y="653" class="rowlabel">RF · GLD</text>
+  <rect x="390" y="620" width="300" height="50" class="same"/><text x="540" y="652" text-anchor="middle" class="cellvalue">0</text>
+  <rect x="720" y="620" width="300" height="50" class="same"/><text x="870" y="652" text-anchor="middle" class="cellvalue">0.000</text>
+  <rect x="1050" y="620" width="300" height="50" class="same"/><text x="1200" y="652" text-anchor="middle" class="cellvalue">0.0%p</text>
+
+  <!-- RF SPY -->
+  <rect x="155" y="685" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="710" r="18" class="model-rf"/><text x="190" y="717" text-anchor="middle" class="modeltext">R</text>
+  <text x="225" y="718" class="rowlabel">RF · SPY</text>
+  <rect x="390" y="685" width="300" height="50" class="reduce"/><text x="540" y="717" text-anchor="middle" class="cellvalue">↓ 30 trades</text>
+  <rect x="720" y="685" width="300" height="50" class="improve"/><text x="870" y="717" text-anchor="middle" class="cellvalue">↑ +0.404</text>
+  <rect x="1050" y="685" width="300" height="50" class="improve"/><text x="1200" y="717" text-anchor="middle" class="cellvalue">↑ +9.3%p</text>
+
+  <!-- RF TLT -->
+  <rect x="155" y="750" width="210" height="50" class="grid"/>
+  <circle cx="190" cy="775" r="18" class="model-rf"/><text x="190" y="782" text-anchor="middle" class="modeltext">R</text>
+  <text x="225" y="783" class="rowlabel">RF · TLT</text>
+  <rect x="390" y="750" width="300" height="50" class="reduce"/><text x="540" y="782" text-anchor="middle" class="cellvalue">↓ 19 trades</text>
+  <rect x="720" y="750" width="300" height="50" class="improve"/><text x="870" y="782" text-anchor="middle" class="cellvalue">↑ +0.145</text>
+  <rect x="1050" y="750" width="300" height="50" class="improve"/><text x="1200" y="782" text-anchor="middle" class="cellvalue">↑ +8.0%p</text>
+
+  <text x="800" y="850" text-anchor="middle" class="note">GBM/MLP: all 3 assets improved · RF: 2 assets improved, GLD unchanged</text>
+</svg>
