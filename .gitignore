@@ -1,0 +1,21 @@
+.DS_Store
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.env
+.venv/
+.claude/
+
+# Generated datasets, models, and caches
+artifacts/models/
+artifacts/preprocessors/
+artifacts/cache/
+artifacts/xai/
+*.pkl
+*.joblib
+*.pt
+*.pth
+
+# Keep artifact documentation and templates
+!artifacts/README.md
+!artifacts/manifest.example.json
