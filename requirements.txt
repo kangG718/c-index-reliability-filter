@@ -1,0 +1,11 @@
+# Exact versions must be frozen from the final controlled training environment.
+numpy
+pandas
+scipy
+scikit-learn
+lightgbm
+torch
+shap
+yfinance
+matplotlib
+joblib
